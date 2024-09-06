@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padma Motors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>JavaScript Validation</h2>
+
+    <p>Please input a number between 1 and 10:</p>
+
+    <input placeholder="Enter bike price" id="numb" />
+
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+      function myFunction() {
+        // Get the value of the input field with id="numb"
+        let x = document.getElementById("numb").value;
+        // If x is Not a Number or less than one or greater than 10
+        let text;
+        if (isNaN(x)) {
+          text = "Kindly input number value";
+        } else {
+          text = (x / 115) * 100;
+        }
+        document.getElementById("demo").innerHTML = Math.floor(text);
+        document.getElementById("demo2").innerHTML = text2;
+        document.getElementById("numb").value = "";
+      }
+    </script>
+  </body>
+</html>
