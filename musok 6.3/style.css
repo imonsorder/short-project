@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1e2a5e;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainborder {
+  background-color: white;
+  border: 3px solid #a04747;
+  padding: 10rem 10rem;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+.input_submit {
+  width: 819px;
+}
+.input_Group {
+  background-color: #7c93c3;
+}
+
+.input_Group input {
+  background: transparent;
+  width: 80.5%;
+  padding: 15px;
+  border: none;
+  outline: none;
+}
+
+.input_Group button {
+  width: 19%;
+  padding: 15px 20px;
+  background-color: #55679c;
+  font-weight: bold;
+  color: white;
+}
+.price_group {
+  margin-top: 4rem;
+  display: flex;
+  gap: 1rem;
+}
+.price {
+  box-shadow: 0px 0px 6px -1px;
+  padding: 4rem 9.5rem;
+  background-color: #d2e0fb;
+}
+
+.message {
+  color: red;
+}
+#price1,
+#price2 {
+  font-weight: bold;
+}

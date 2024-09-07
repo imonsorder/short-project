@@ -7,32 +7,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>JavaScript Validation</h2>
+    <div class="mainborder">
+      <h1 class="heading">মূসক ৬.৩</h1>
 
-    <p>Please input a number between 1 and 10:</p>
+      <div class="input_submit">
+        <div class="input_Group">
+          <input id="inp" />
+          <button type="button" id="submit">Submit</button>
+        </div>
+      </div>
 
-    <input placeholder="Enter bike price" id="numb" />
+      <p id="message" class="message"></p>
 
-    <button type="button" onclick="myFunction()">Submit</button>
-
-    <p id="demo"></p>
-    <p id="demo2"></p>
+      <div class="price_group">
+        <div class="price1 price">
+          <p>একক মূল্য</p>
+          <span id="price1">0</span>
+        </div>
+        <div class="price2 price">
+          <p>মূল্য সংযোজন কর</p>
+          <span id="price2">0</span>
+        </div>
+      </div>
+    </div>
 
     <script>
-      function myFunction() {
-        // Get the value of the input field with id="numb"
-        let x = document.getElementById("numb").value;
-        // If x is Not a Number or less than one or greater than 10
-        let text;
-        if (isNaN(x)) {
-          text = "Kindly input number value";
+      let x = document.getElementById("inp").value;
+      let Submit = document.getElementById("submit");
+      let message = document.getElementById("message");
+
+      let Validtext;
+      Submit.addEventListener("click", () => {
+        let x = document.getElementById("inp").value;
+        if (isNaN(x) || x == "") {
+          Validtext = "**অনুগ্রহ করে সঠিক তথ্য ইনপুট দিন**";
+          message.innerText = Validtext;
         } else {
-          text = (x / 115) * 100;
+          text1 = (x / 115) * 100;
+          text2 = (text1 * 15) / 100;
         }
-        document.getElementById("demo").innerHTML = Math.floor(text);
-        document.getElementById("demo2").innerHTML = text2;
-        document.getElementById("numb").value = "";
-      }
+        document.getElementById("price1").innerText = text1.toFixed(3);
+        document.getElementById("price2").innerText = text2.toFixed(3);
+      });
     </script>
   </body>
 </html>
